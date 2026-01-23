@@ -26,14 +26,13 @@ genericAnimal.bark(); // Why does this happen? --> woof!
 console.log(myDog.constructor.name); // Why is this 'Animal' and not 'Dog'? --> Animal because we did Dog.prototype = Animal.prototype; 
 // so this removed dog's props and added dof animals not both have shared context and constructer is animal.
 
-function SmartPhone(brand) {
-  this.brand = brand;
-  
-  return {
-    brand: "Generic",
-    os: "Android"
-  };
-}
+/* 
+This happens because Dog.prototype = Animal.prototype makes both constructors share the same prototype object instead of creating 
+a new prototype chain. After that assignment, adding Dog.prototype.bark actually adds bark to Animal.prototype too, so even
+genericAnimal can access bark() through its prototype and prints “Woof!”. Also, since the shared prototype object’s constructor 
+property still points to Animal, myDog.constructor resolves to Animal, which is why myDog.constructor.name outputs "Animal" 
+instead of "Dog".
+*/
 
 
 
