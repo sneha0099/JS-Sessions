@@ -38,26 +38,50 @@
 //     .then(console.log)
 //     .catch(console.log)
 
-// const p1 = Promise.reject("succeed 1");
-// const p2 = Promise.reject("failed")
-// const p3 = Promise.reject("succeed 2");
+const p1 = Promise.reject("succeed 1");
+const p2 = Promise.reject("failed")
+const p3 = Promise.reject("succeed 2");
 
-// Promise.allSettled([p1,p2,p3])
-//     .then(console.log)
-//     .catch(console.log)
+Promise.allSettled([p1,p2,p3])
+    .then(console.log)
+    .catch(console.log)
 
-// const data = new Promise((resolve,reject)=>{
-//     setTimeout(()=>{
-//         resolve("Done")
-//     },1000)
-// })
+const data = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve("Done")
+    },1000)
+})
 
-// data.then(
-//     (dataresp)=>{
-//         console.log(dataresp)
-//     }
-// )
-// .catch((e)=>{
-//     console.error(error);
-// })
+data.then(
+    (dataresp)=>{
+        console.log(dataresp)
+    }
+)
+.catch((e)=>{
+    console.error(error);
+})
+
+
+const t1 = Promise.reject("succeed 1");
+const t2 = Promise.reject("failed")
+const t3 = Promise.reject("succeed 2");
+
+Promise.allSettled([p1,p2,p3])
+    .then(console.log)
+    .catch(console.log)
+
+const datares = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve("Done")
+    },1000)
+})
+
+data.then(
+    (dataresp)=>{
+        console.log(dataresp)
+    }
+)
+.catch((e)=>{
+    console.error(error);
+})
 
