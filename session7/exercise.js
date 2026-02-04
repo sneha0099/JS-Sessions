@@ -1,4 +1,4 @@
-//Q1. Simple Object Context
+//Q1. Simple Object Context 
 
 const laptop = {
     brand: "Dell",
