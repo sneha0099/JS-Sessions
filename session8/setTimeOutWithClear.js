@@ -13,7 +13,6 @@ function countdown(start) {
  // Should stop at 0
 }
 
-
 countdown(10);
 // Expected output:
 // 10 (immediately)
