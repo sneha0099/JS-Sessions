@@ -57,8 +57,18 @@
   width: 18rem;
 }
 
-#search-bar{
+.navbar{
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
+}
+
+.filterbtn{
+   height: 2rem;
+   cursor: pointer;
+}
+
+.filterbtn:hover{
+  background-color: #88d7cf;
 }

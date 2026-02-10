@@ -9,7 +9,7 @@ const activities = [
 ];
 
 const cloned = structuredClone(activities)
-console.log(cloned);
+//console.log(cloned);
 
 
 const activitiesProcessor = () => {
@@ -33,5 +33,35 @@ const activitiesProcessor = () => {
       return report;
 },{})}
 
-const res = activitiesProcessor()
-console.log("res",res);
+// const res = activitiesProcessor()
+// console.log("res",res);
+
+const activityAggregator = {
+  result : {},
+
+ activitywork(activities){
+  this.result = {}
+  return activities.reduce((result, activity)=>{
+      const{userId,type,duration = 0} = activity;
+
+      if(!result[userId]){
+        result[userId] = {
+          totalTime: 0
+        }
+      }
+      
+      result[userId].totalTime += duration;
+
+      if(!result[userId][type]){
+        result[userId][type] = 0;
+      }
+
+      result[userId][type] +=1
+
+      return result;
+    },this.result)
+}
+}
+
+const res = activityAggregator.activitywork(activities)
+console.log(res);

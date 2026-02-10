@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Persistent.css">
+</head>
+<body>
+    <div>
+        <div class="inputfromuser">
+            <input type="text" id="inputtag" placeholder="enter you note">
+            <button id="notebtn">Add</button>
+        </div>
+        <div id="notes"></div>
+        <!-- Edit Modal -->
+    <div id="edit-modal" class="hidden">
+    <div class="modal-content">
+        <h3>Edit Note</h3>
+        <input type="text" id="edit-input" />
+        <div class="modal-actions">
+        <button id="save-edit">Save</button>
+        <button id="cancel-edit">Cancel</button>
+        </div>
+    </div>
+    </div>
+
+    </div>
+    
+    <script src="./PersistentNotes.js"></script>
+</body>
+</html>
